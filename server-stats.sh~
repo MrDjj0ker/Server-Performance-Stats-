@@ -1,0 +1,6 @@
+#!/bin/bash
+stats=/usr/bin/top
+ 
+$stats | grep -E --color=never "%Cpu|buff/cache"
+
+df -h | awk '{print $1,$4,$5}' | column -t
