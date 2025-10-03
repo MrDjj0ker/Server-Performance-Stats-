@@ -4,7 +4,7 @@ NC='\e[0m'
 echo -e "${RED}Memory and CPU usage:${NC}"
 
 top | grep -E --color=never "%Cpu|buff/cache"
-for i in {1..92};do
+for i in {1..77};do
 	echo -n "-"
 done
 echo
@@ -12,7 +12,7 @@ sleep 0.1
 echo -e "${RED}Disk usage${NC}"
 echo 
 df -h | awk '{print $1,$4,$5}' | column -t
-for i in {1..92};do
+for i in {1..77};do
 	echo -n "-"
 done
 echo
