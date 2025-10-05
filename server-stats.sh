@@ -20,4 +20,4 @@ echo
 
 echo -e "${RED}Top 5 processes by CPU and Memory usage${NC}"
 echo
-top | ps -aux | awk '{print $1,$3,$4,$11}' | head -6
+ps aux --sort=-%cpu | awk '{print $1,$3,$4,$11}' | head -6
