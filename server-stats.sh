@@ -3,7 +3,7 @@ RED='\e[31m'
 NC='\e[0m'
 echo -e "${RED}Memory and CPU usage:${NC}"
 
-top | grep -E --color=never "%Cpu|buff/cache"
+top -b -n1 | grep -E --color=never "%Cpu|buff/cache"
 for i in {1..77};do
 	echo -n "-"
 done
